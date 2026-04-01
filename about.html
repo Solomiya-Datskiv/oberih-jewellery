@@ -3,32 +3,422 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OBERIH — Symbolic Bead Jewellery</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Your CSS -->
+  <title>Our Story — OBERIH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Philosopher:ital@0;1&family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/about.css">
 </head>
 <body>
 
-  <!-- Navigation (same on every page) -->
+  <!-- ===== NAVIGATION ===== -->
   <nav class="main-nav">
-    <!-- nav content here -->
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-symbol">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="2"  width="10" height="10" stroke="#1a1a1a" stroke-width="1.2"/>
+            <rect x="15" y="28" width="10" height="10" stroke="#1a1a1a" stroke-width="1.2"/>
+            <rect x="2"  y="15" width="10" height="10" stroke="#1a1a1a" stroke-width="1.2"/>
+            <rect x="28" y="15" width="10" height="10" stroke="#1a1a1a" stroke-width="1.2"/>
+            <rect x="15" y="15" width="10" height="10" stroke="#1a1a1a" stroke-width="1.2"/>
+            <circle cx="20" cy="7"  r="2"   fill="#1a1a1a"/>
+            <circle cx="20" cy="33" r="2"   fill="#1a1a1a"/>
+            <circle cx="7"  cy="20" r="2"   fill="#1a1a1a"/>
+            <circle cx="33" cy="20" r="2"   fill="#1a1a1a"/>
+            <circle cx="20" cy="20" r="2.5" fill="#8B1A1A"/>
+          </svg>
+        </div>
+        <div class="nav-logo-divider"></div>
+        <div class="nav-logo-words">
+          <span class="nav-brand">OBERIH</span>
+          <span class="nav-tagline">symbolic bead jewellery</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="https://instagram.com/oberih.jewellery" target="_blank" class="nav-instagram">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+        </svg>
+        Instagram
+      </a>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- Page content goes here -->
-  <main>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="collection.html">Collection</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://instagram.com/oberih.jewellery" target="_blank">Instagram</a>
+  </div>
 
-  </main>
 
-  <!-- Footer (same on every page) -->
+  <!-- ===== HERO
+       Same structure as collection page — two collar images
+       peeking in from sides, page title centred.
+       REPLACE the two placeholder divs with your images.
+  ===== -->
+  <section class="about-hero">
+
+    <!-- ============================================================
+         🖼️ 
+         ============================================================ -->
+       <img src="images/ui/LEFT 2.png"
+              alt=""
+              class="about-hero-collar about-hero-collar--left"> 
+
+    <h1 class="about-hero-title">Our Story</h1>
+
+    <!-- ============================================================
+         🖼️ 
+         ============================================================ -->
+    <img src="images/ui/RIGHT 2.png"
+              alt=""
+              class="about-hero-collar about-hero-collar--right"> 
+
+  </section>
+
+
+  <!-- ===== INTRO — centred heading + body text ===== -->
+  <section class="about-intro">
+    <div class="about-intro-inner">
+      <h2 class="about-intro-title">Tradition Meets Contemporary Design</h2>
+      <p class="about-intro-body">
+        Oberih — meaning "protective charm" in Ukrainian — brings centuries-old ornamental patterns
+        into modern wear. Each piece of jewelry is handcrafted using traditional bead-weaving
+        techniques, honoring cultural heritage while creating bold, contemporary accessories.
+      </p>
+      <p class="about-intro-body">
+        This is jewelry for those who wear their story, who value craft over mass production, and who see
+        accessories as meaningful personal expression.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== MAKER SECTION
+       Left: maker photo | Right: name + bio paragraphs + CTA
+  ===== -->
+  <section class="maker">
+    <div class="container">
+      <div class="maker-inner">
+
+        <!-- Left: photo -->
+        <div class="maker-img-wrap">
+          <!-- ============================================================
+               🖼️ 
+               ============================================================ -->
+          <div class="maker-img-placeholder"> <img src="images/about/Sophia-image.png"
+                    alt="Sofia Pankiv — jewellery maker"
+                    class="maker-img"></div>
+        </div>
+
+        <!-- Right: bio -->
+        <div class="maker-content">
+          <p class="eyebrow">The Maker</p>
+          <h2 class="maker-name">Sofia Pankiv</h2>
+
+          <p class="maker-bio">
+            Sofia Pankiv is a digital artist and designer with a strong interest in combining digital
+            creativity and traditional craft. Her work spans web design, poster design, and brand
+            development, alongside hands-on artistic practices.
+          </p>
+          <p class="maker-bio">
+            Alongside her digital projects, Sofia creates traditional Ukrainian bead jewelry,
+            including sylianky, nyzanky, chokers, and kryzy. Each piece is carefully handcrafted
+            with beads, drawing inspiration from Ukrainian cultural heritage while exploring
+            contemporary design aesthetics.
+          </p>
+          <p class="maker-bio">
+            Her broader creative interests include music, graphic design, painting, and
+            crocheting. Through these different mediums, she continues to experiment with
+            form, color, and visual storytelling.
+          </p>
+          <p class="maker-bio">
+            Sofia is currently focused on growing her jewelry project and building a recognizable
+            brand around her beadwork. Her pieces have already been sold to international
+            buyers, marking the first steps toward bringing traditional Ukrainian bead jewelry to a
+            wider global audience.
+          </p>
+
+          <a href="collection.html" class="btn btn-primary" style="margin-top:8px;">
+            View Collection
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== PROCESS SECTION
+       Eyebrow + large title , 4-column dark cards , closing text
+  ===== -->
+  <section class="process">
+    <div class="container">
+
+      <div class="process-header">
+        <p class="eyebrow">How it is made</p>
+        <h2 class="process-title">The Process</h2>
+      </div>
+
+      <!-- 4 dark cards -->
+      <div class="process-grid">
+
+        <div class="process-card">
+          <div class="process-card-top">
+            <!-- Icon box -->
+            <div class="process-icon">
+              <!-- Layers / pattern icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B1A1A" stroke-width="1.8">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="process-num">01</span>
+          </div>
+          <h3 class="process-step-title">Pattern Design</h3>
+          <p class="process-step-body">
+            Each piece begins as a sketch — translating traditional Ukrainian
+            motifs into a contemporary bead grid pattern.
+          </p>
+          <p class="process-time">1 Day</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-card-top">
+            <div class="process-icon">
+              <!-- Star / bead icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B1A1A" stroke-width="1.8">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <span class="process-num">02</span>
+          </div>
+          <h3 class="process-step-title">Bead Selection</h3>
+          <p class="process-step-body">
+            Glass beads are carefully chosen for each piece — colour
+            combinations developed.
+          </p>
+          <p class="process-time">1 Day</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-card-top">
+            <div class="process-icon">
+              <!-- Heart / craft icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B1A1A" stroke-width="1.8">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <span class="process-num">03</span>
+          </div>
+          <h3 class="process-step-title">Hand Weaving</h3>
+          <p class="process-step-body">
+            Using traditional bead-weaving techniques, each bead is threaded
+            and set by hand. Statement collars take 40-60 hours of work.
+          </p>
+          <p class="process-time">1-3 Weeks</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-card-top">
+            <div class="process-icon">
+              <!-- Package / dispatch icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8B1A1A" stroke-width="1.8">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+            </div>
+            <span class="process-num">04</span>
+          </div>
+          <h3 class="process-step-title">Dispatch</h3>
+          <p class="process-step-body">
+            Each piece is inspected, secured, and packaged by hand — ready
+            to be worn and worn again for years.
+          </p>
+          <p class="process-time">1-2 Days</p>
+        </div>
+
+      </div><!-- /process-grid -->
+
+      <!-- Closing text beneath the cards -->
+      <div class="process-closing">
+        <p>
+          In a world of fast fashion and disposable accessories, OBERIH takes a different path. Each piece
+          is made-to-order with a 2-3 week production timeline, because quality requires time.
+        </p>
+        <p>
+          This approach means your jewelry is unique. It means owning something with true value, made to
+          last, not destined for a landfill after one season.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== PROCESS PHOTO STRIP
+       3 side-by-side process/craft photos — no text, full width
+  ===== -->
+  <div class="process-photos">
+
+    <!-- ============================================================
+         🖼️ 
+         ============================================================ -->
+    <img src="images/about/process-01.jpg"
+              alt="Beadwork in progress"
+              class="process-photo">
+
+    <!-- ============================================================
+         🖼️ 
+         ============================================================ -->
+    <img src="images/about/process-02.jpg"
+              alt="Bead pattern detail"
+              class="process-photo">
+
+    <!-- ============================================================
+         🖼️ 
+         ============================================================ -->
+      <img src="images/about/process-03.jpg"
+              alt="Finished beadwork detail"
+              class="process-photo">
+
+  </div>
+
+
+  <!-- ===== VALUES SECTION
+       Centred heading | 3 value columns with brand symbol icons
+  ===== -->
+  <section class="values">
+    <div class="container">
+
+      <h2 class="values-title">What We Value</h2>
+
+      <div class="values-grid">
+
+        <div class="value-item">
+          <!-- Brand symbol as icon -->
+          <div class="value-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <rect x="15" y="2"  width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="15" y="28" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="2"  y="15" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="28" y="15" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="15" y="15" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <circle cx="20" cy="20" r="3" fill="white"/>
+            </svg>
+          </div>
+          <h3 class="value-name">Authenticity</h3>
+          <p class="value-body">
+            Keeping Ukrainian bead-weaving techniques alive by making them
+            economically sustainable and culturally relevant today.
+          </p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <rect x="15" y="2"  width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="15" y="28" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="2"  y="15" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="28" y="15" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="15" y="15" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <circle cx="20" cy="20" r="3" fill="white"/>
+            </svg>
+          </div>
+          <h3 class="value-name">Cultural Preservation</h3>
+          <p class="value-body">
+            Keeping Ukrainian bead-weaving techniques alive by making them
+            economically sustainable and culturally relevant today.
+          </p>
+        </div>
+
+        <div class="value-item">
+          <div class="value-icon">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <rect x="15" y="2"  width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="15" y="28" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="2"  y="15" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="28" y="15" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <rect x="15" y="15" width="10" height="10" stroke="white" stroke-width="1.2"/>
+              <circle cx="20" cy="20" r="3" fill="white"/>
+            </svg>
+          </div>
+          <h3 class="value-name">Individual Expression</h3>
+          <p class="value-body">
+            Bold pieces for people who want to stand out, who see jewelry as
+            personal statement, not subtle background.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <!-- footer content here -->
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="15" y="2"  width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <rect x="15" y="28" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <rect x="2"  y="15" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <rect x="28" y="15" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <rect x="15" y="15" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <circle cx="20" cy="20" r="3" fill="#8B1A1A"/>
+            </svg>
+            OBERIH
+          </div>
+          <p class="footer-tagline">Symbolic bead jewellery</p>
+          <p class="footer-desc">
+            Handmade beaded accessories rooted in Ukrainian ornamental tradition.
+            Each piece is a statement made with skill, time, and meaning.
+          </p>
+        </div>
+        <div>
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Connect</p>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/oberih.jewellery" target="_blank">Instagram</a></li>
+            <li><a href="contact.html">Email</a></li>
+            <li><a href="contact.html">Custom Orders</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 OBERIH. Handmade with care.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/oberih.jewellery" target="_blank">Instagram</a>
+          <a href="contact.html">Email</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- Your JS -->
   <script src="js/main.js"></script>
+
 </body>
 </html>
