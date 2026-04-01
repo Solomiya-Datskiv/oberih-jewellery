@@ -3,32 +3,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OBERIH — Symbolic Bead Jewellery</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Your CSS -->
+  <title>Collection — OBERIH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Philosopher:ital@0;1&family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/collection.css">
 </head>
 <body>
 
-  <!-- Navigation (same on every page) -->
+  <!-- ===== NAVIGATION (identical to index.html — paste same nav) ===== -->
   <nav class="main-nav">
-    <!-- nav content here -->
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-symbol">
+    <img src="images/ui/LOGO SIMPLE BLACK.png"
+                  alt="OBERIH logo symbol"
+                  style="width:32px;height:32px;object-fit:contain;">
+        </div>
+        <div class="nav-logo-divider"></div>
+        <div class="nav-logo-words">
+          <span class="nav-brand">OBERIH</span>
+          <span class="nav-tagline">symbolic bead jewellery</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html" class="active">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="https://instagram.com/oberih.jewellery" target="_blank" class="nav-instagram">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+        </svg>
+        Instagram
+      </a>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- Page content goes here -->
-  <main>
+  <!-- Mobile nav drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="collection.html">Collection</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://instagram.com/oberih.jewellery" target="_blank">Instagram</a>
+  </div>
 
+
+  <!-- ===== COLLECTION HERO =====
+       The hero shows the collar necklace peeking in from both sides
+       with "COLLECTION" text centred over a cream background.
+       Replace the two img tags with your actual photos.
+  -->
+  <section class="collection-hero">
+
+    <!-- ============================================================
+         🖼️ 
+         ============================================================ -->
+    <img src="images/ui/LEFT 1.png"
+                       alt="" class="hero-collar hero-collar--left"> -->
+
+    <!-- Page title -->
+    <h1 class="collection-hero-title" > Collection </h1>
+
+    <!-- ============================================================
+         🖼️ 
+         ============================================================ -->
+<img src="images/ui/RIGHT 1.png"
+                       alt="" class="hero-collar hero-collar--right"> -->
+
+  </section>
+
+
+  <!-- ===== FILTER BAR ===== -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter by type:</span>
+    <div class="filter-buttons">
+      <button class="filter-btn filter-btn--active" data-filter="necklaces">
+        Necklaces
+      </button>
+      <button class="filter-btn" data-filter="other">
+        Other Accessories
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ===== PRODUCT GRID =====
+       Each .product-card has data-category so JS can filter them.
+       To add a real product:
+         1. Change data-category to "necklaces" or "other"
+         2. Replace the .card-img-placeholder div with an <img> tag
+         3. Update the name, price, and href
+  -->
+  <main class="collection-main">
+    <div class="container">
+      <div class="collection-grid" id="collectionGrid">
+
+        <!-- CARD TEMPLATE — duplicate this for each product -->
+
+        <!-- Product 1 -->
+        <a href="product.html" class="product-card" data-category="necklaces">
+          <div class="card-img-wrap">
+          <img src="images/products/Geometric Red Statement Necklace 1.jpg" alt="Geometric Red Statement Necklace"> 
+          <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
+          </div>
+          <div class="card-info">
+            <p class="card-category">Necklace</p>
+            <p class="card-name">Geometric Red Statement Necklace</p>
+            <p class="card-price">€55</p>
+          </div>
+        </a>
+
+        <!-- Product 2 -->
+        <a href="product.html" class="product-card" data-category="necklaces">
+          <div class="card-img-wrap">
+          <img src="images/products/Autumn Sylianka Statement Necklace 1.jpg" alt="Autumn Sylianka Statement Necklace"> 
+            <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
+          </div>
+          <div class="card-info">
+            <p class="card-category">Necklace</p>
+            <p class="card-name">Autumn Sylianka Statement Necklace</p>
+            <p class="card-price">€49</p>
+          </div>
+        </a>
+
+        <!-- Product 3 -->
+        <a href="product.html" class="product-card" data-category="necklaces">
+          <div class="card-img-wrap">
+          <img src="images/products/Beige Sylianka Statement Necklace 1.jpg" alt="Beige Sylianka Statement Necklace"> 
+            <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
+          </div>
+          <div class="card-info">
+            <p class="card-category">Necklace</p>
+            <p class="card-name">Beige Sylianka Statement Necklace</p>
+            <p class="card-price">€45</p>
+          </div>
+        </a>
+
+        <!-- Product 4 -->
+        <a href="product.html" class="product-card" data-category="necklaces">
+          <div class="card-img-wrap">
+          <img src="images/products/Geometric Sunburst Necklace 1.png" alt="Geometric Sunburst Necklace"> 
+            <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
+          </div>
+          <div class="card-info">
+            <p class="card-category">Necklace</p>
+            <p class="card-name">Geometric Sunburst Necklace</p>
+            <p class="card-price">€25</p>
+          </div>
+        </a>
+
+        <!-- Product 5 -->
+        <a href="product.html" class="product-card" data-category="necklaces">
+          <div class="card-img-wrap">
+          <img src="images/products/Traditional Pattern Ribbon Choker 1.jpg" alt="Traditional Pattern Ribbon Choker"> 
+            <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
+          </div>
+          <div class="card-info">
+            <p class="card-category">Necklace</p>
+            <p class="card-name">Traditional Pattern Ribbon Choker</p>
+            <p class="card-price">€45</p>
+          </div>
+        </a>
+
+        <!-- Product 6 — example "other" category for filter -->
+        <a href="product.html" class="product-card" data-category="other">
+          <div class="card-img-wrap">
+          <img src="images/products/Little Deer Charm 1.jpg" alt="Little Deer Charm"> 
+            <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
+          </div>
+          <div class="card-info">
+            <p class="card-category">Beaded Charm</p>
+            <p class="card-name">Little Deer Charm 1</p>
+            <p class="card-price">€42</p>
+          </div>
+        </a>
+
+        <!-- Product 7 — example "other" category for filter -->
+        <a href="product.html" class="product-card" data-category="other">
+          <div class="card-img-wrap">
+          <img src="images/products/Beaded Alpaca Figure 1.jpg" alt="Beaded Alpaca Figure"> 
+            <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
+          </div>
+          <div class="card-info">
+            <p class="card-category">Beaded Charm</p>
+            <p class="card-name">Beaded Alpaca Figure 1</p>
+            <p class="card-price">€42</p>
+          </div>
+        </a>
+
+        <!-- Product 8 -->
+        <a href="product.html" class="product-card" data-category="other">
+          <div class="card-img-wrap">
+          <img src="images/products/Beaded Goose Figure 1.jpg" alt="Beaded Goose Figure"> 
+            <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
+          </div>
+          <div class="card-info">
+            <p class="card-category">Beaded Charm</p>
+            <p class="card-name">Beaded Goose Figure</p>
+            <p class="card-price">€38</p>
+          </div>
+        </a>
+
+
+
+      </div><!-- /collection-grid -->
+    </div>
   </main>
 
-  <!-- Footer (same on every page) -->
+
+  <!-- ===== CTA BANNER (same as homepage — reuse from style.css) ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2 class="cta-title">
+            Looking for something unique?<br>
+            Custom colour orders are open.
+          </h2>
+          <p class="cta-sub">
+            Each piece can be created in your chosen colour palette!<br>
+            Get in touch to discuss.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">Contact the Maker →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER (identical to index.html — paste same footer) ===== -->
   <footer>
-    <!-- footer content here -->
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="15" y="2"  width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <rect x="15" y="28" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <rect x="2"  y="15" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <rect x="28" y="15" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <rect x="15" y="15" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
+              <circle cx="20" cy="20" r="3" fill="#8B1A1A"/>
+            </svg>
+            OBERIH
+          </div>
+          <p class="footer-tagline">Symbolic bead jewellery</p>
+          <p class="footer-desc">
+            Handmade beaded accessories rooted in Ukrainian ornamental tradition.
+            Each piece is a statement made with skill, time, and meaning.
+          </p>
+        </div>
+        <div>
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Connect</p>
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/oberih.jewellery" target="_blank">Instagram</a></li>
+            <li><a href="contact.html">Email</a></li>
+            <li><a href="contact.html">Custom Orders</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 OBERIH. Handmade with care.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/oberih.jewellery" target="_blank">Instagram</a>
+          <a href="contact.html">Email</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- Your JS -->
   <script src="js/main.js"></script>
+  <script src="js/collection.js"></script>
+
 </body>
 </html>

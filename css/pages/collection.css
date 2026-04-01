@@ -1,0 +1,245 @@
+
+.collection-hero {
+  margin-top: var(--nav-height);
+  position: relative;
+  height: 280px;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.collection-hero-title {
+  font-family: var(--font-logo);
+  /* font-size: clamp(52px, 8vw, 100px);*/
+  font-weight: 400;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  position: relative;
+  z-index: 2;
+  /* Sits on top of the collar images */
+}
+
+/* The two collar images peeking in from left and right */
+.hero-collar {
+  position: absolute;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-collar--left  { left: 0;  object-position: right top; }
+.hero-collar--right { right: 0; object-position: left top;  }
+
+/* Fade the collars out toward the centre so the title reads cleanly */
+.hero-collar--left::after,
+.hero-collar--right::after { content: ''; }
+
+.hero-collar--left {
+  -webkit-mask-image: linear-gradient(to right, black 30%, transparent 100%);
+  mask-image:         linear-gradient(to right, black 30%, transparent 100%);
+}
+
+.hero-collar--right {
+  -webkit-mask-image: linear-gradient(to left, black 30%, transparent 100%);
+  mask-image:         linear-gradient(to left, black 30%, transparent 100%);
+}
+
+/* Placeholder stand-in until real images added */
+.hero-collar--placeholder {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(139,26,26,0.25) 0%,
+    rgba(26,26,26,0.6)   60%,
+    transparent          100%
+  );
+}
+
+
+/* ── FILTER BAR ────────────────────────────────────── */
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px var(--section-pad-h);
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.filter-label {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  cursor: pointer;
+  border: 1.5px solid var(--text-dark);
+  background: transparent;
+  color: var(--text-dark);
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Active / selected filter button — filled black */
+.filter-btn--active {
+  background: var(--text-dark);
+  color: var(--cream);
+}
+
+.filter-btn:not(.filter-btn--active):hover {
+  background: rgba(26,26,26,0.06);
+}
+
+
+/* ── COLLECTION GRID ───────────────────────────────── */
+
+.collection-main {
+  background: var(--cream);
+  padding: 40px 0 80px;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Each card is an <a> tag so the whole card is clickable */
+.product-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--cream);
+  border: 1px solid rgba(26,26,26,0.08);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+/* Square image area */
+.card-img-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--charcoal);
+}
+
+
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .card-img-placeholder,
+.product-card:hover .card-img {
+  transform: scale(1.05);
+}
+
+/* "View Piece" hover overlay */
+.card-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(139,26,26,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .card-hover { opacity: 1; }
+
+.card-hover-text {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--cream);
+  border: 1px solid rgba(245,240,232,0.6);
+  padding: 10px 22px;
+}
+
+/* Card text info below image */
+.card-info {
+  padding: 14px 16px 18px;
+}
+
+.card-category {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.card-name {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.card-price {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 0.5px;
+}
+
+/* Hidden state — JS adds this when filtering */
+.product-card.hidden {
+  display: none;
+}
+
+
+/* ── RESPONSIVE ────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .collection-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .collection-hero  { height: 180px; }
+  .filter-bar       { padding: 16px 24px; flex-wrap: wrap; }
+  .collection-grid  { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+
+@media (max-width: 480px) {
+  .collection-grid  { grid-template-columns: 1fr; }
+}
