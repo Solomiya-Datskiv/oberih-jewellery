@@ -19,7 +19,7 @@
   font-weight: 400;
   letter-spacing: 8px;
   text-transform: uppercase;
-  color: var(--text-dark);
+  color: var(--black);
   position: relative;
   z-index: 2;
 }
@@ -62,7 +62,7 @@
 
 .about-intro {
   padding: 80px var(--section-pad-h) 72px;
-  background: var(--cream);
+  background: var(--bg-page);
   text-align: center;
 }
 
@@ -94,7 +94,7 @@
 
 .maker {
   padding: 80px 0 100px;
-  background: var(--cream);
+  background: var(--bg-page);
   border-top: 1px solid var(--border);
 }
 
@@ -111,17 +111,8 @@
   overflow: hidden;
 }
 
-/*
-  REPLACE .maker-img-placeholder with your <img> tag:
-  <img src="images/about/sofia-portrait.jpg"
-       alt="Sofia Pankiv"
-       class="maker-img">
-*/
-.maker-img-placeholder {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  background: #d4cfc7;   /* warm grey — matches the warm photo bg in wireframe */
-}
+
+
 
 .maker-img {
   width: 100%;
@@ -153,7 +144,7 @@
 
 .process {
   padding: 80px 0 0;
-  background: var(--cream);
+  background: var(--bg-page);
   border-top: 1px solid var(--border);
 }
 
@@ -289,7 +280,7 @@
 
 .values {
   padding: 100px 0;
-  background: var(--cream);
+  background: var(--bg-page);
 }
 
 .values-title {

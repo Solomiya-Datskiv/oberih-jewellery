@@ -27,41 +27,68 @@
 }
 
 
+/* ── LIGHT THEME (default) ── */
+:root {
+  /* Fonts */
+  --font-logo:    'Poiret One', cursive;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-accent:  'Philosopher', serif;
 
-    :root {
-      /* Fonts */
-      --font-logo:    'Poiret One', cursive;
-      --font-heading: 'Montserrat', sans-serif;
-      --font-body:    'Inter', sans-serif;
-      --font-accent:  'Philosopher', serif;
- 
-      /* Font sizes */
-      --size-h1:    72px;
-      --size-h2:    40px;
-      --size-h3:    24px;
-      --size-h4:    14px;
-      --size-body:  16px;
-      --size-small: 14px;
-      --size-label: 12px;
- 
-      /* Brand colours — from your moodboard */
-      --cream:        #F5F0E8;
-      --cream-dark:   #EDE8DF;
-      --black:        #0a0a0a;
-      --charcoal:     #111111;
-      --red:          #8B1A1A;
-      --red-bright:   #901A07;
-      --text-dark:    #1a1a1a;
-      --text-mid:     #4a4a4a;
-      --text-muted:   #888888;
-      --border:       rgba(26,26,26,0.12);
- 
-      /* Layout */
-      --nav-height:       72px;
-      --section-pad-v:    100px;
-      --section-pad-h:    80px;
-      --container-max:    1280px;
-    }
+  /* Font sizes */
+  --size-h1:    72px;
+  --size-h2:    40px;
+  --size-h3:    24px;
+  --size-h4:    14px;
+  --size-body:  16px;
+  --size-small: 14px;
+  --size-label: 12px;
+
+  /* Brand colours */
+  --cream:        #F5F0E8;
+  --cream-dark:   #EDE8DF;
+  --black:        #0a0a0a;
+  --charcoal:     #111111;
+  --red:          #901A07;
+  --red-bright:   #C0392B;
+  --text-dark:    #1a1a1a;
+  --text-mid:     #4a4a4a;
+  --text-muted:   #888888;
+  --border:       rgba(26,26,26,0.12);
+
+  /* UI surfaces */
+  --bg-page:      #F5F0E8;
+  --bg-section:   #EDE8DF;
+  --bg-nav:       #F5F0E8;
+  --nav-border:   rgba(26,26,26,0.1);
+
+  /* Layout */
+  --nav-height:       72px;
+  --section-pad-v:    100px;
+  --section-pad-h:    80px;
+  --container-max:    1280px;
+}
+
+/* ── DARK THEME ── */
+[data-theme="dark"] {
+  --cream:        #f0ece3;
+  --cream-dark:   #2a2a2a;
+  --black:        #0a0a0a;
+  --charcoal:     #1a1a1a;
+  --red:          #8B1A1A;
+  --red-bright:   #C0392B;
+  --text-dark:    #f0ece3;
+  --text-mid:     rgba(240,236,227,0.7);
+  --text-muted:   rgba(240,236,227,0.4);
+  --border:       rgba(240,236,227,0.1);
+
+  --bg-page:      #0a0a0a;
+  --bg-section:   #111111;
+  --bg-nav:       #0a0a0a;
+  --nav-border:   rgba(240,236,227,0.08);
+}
+
+
  
     /* =====================================================
        RESET & BASE
@@ -70,8 +97,8 @@
     html { scroll-behavior: smooth; }
  
     body {
-      background: var(--cream);
-      color: var(--text-dark);
+   background: var(--bg-page);   /* was: var(--cream) */
+  color: var(--text-dark);
       font-family: var(--font-body);
       font-size: var(--size-body);
       font-weight: 400;
@@ -228,13 +255,47 @@
        NAVIGATION
        Matches wireframe: logo left | links centre | instagram right
        ===================================================== */
+/* ── THEME TOGGLE BUTTON ───────────────────────────── */
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-mid);
+  transition: color 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  color: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
+/* Show/hide correct icon based on current theme */
+
+/* Light mode: show moon (to switch to dark) */
+.theme-icon--sun  { display: none; }
+.theme-icon--moon { display: block; }
+
+/* Dark mode: show sun (to switch to light) */
+[data-theme="dark"] .theme-icon--sun  { display: block; }
+[data-theme="dark"] .theme-icon--moon { display: none; }
+
+
+
+
     .main-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 200;
       height: var(--nav-height);
-      background: var(--cream);
-      border-bottom: 1px solid var(--border);
+  background: var(--bg-nav);
+  border-bottom: 1px solid var(--nav-border);
       display: flex;
       align-items: center;
     }
@@ -443,7 +504,7 @@
        ===================================================== */
     .intro {
       padding: var(--section-pad-v) 0;
-      background: var(--cream);
+  background: var(--bg-page);
     }
  
     .intro-inner {
@@ -527,7 +588,7 @@
        ===================================================== */
     .featured {
       padding: var(--section-pad-v) 0;
-      background: var(--cream-dark);
+       background: var(--bg-section);
     }
  
     .featured-header {
@@ -560,7 +621,7 @@
     }
  
     .product-card {
-      background: var(--cream);
+  background: var(--bg-page);
       position: relative;
       overflow: hidden;
       cursor: pointer;
@@ -575,15 +636,7 @@
       position: relative;
     }
  
-    .card-img-placeholder {
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(ellipse at 50% 50%, rgba(139,26,26,0.2) 0%, #111 70%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.6s ease;
-    }
+
  
     .product-card:hover .card-img-placeholder {
       transform: scale(1.04);
@@ -599,6 +652,7 @@
       justify-content: center;
       opacity: 0;
       transition: opacity 0.3s ease;
+        pointer-events: none;
     }
  
     .product-card:hover .card-hover { opacity: 1; }
@@ -609,7 +663,7 @@
       font-weight: 600;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--cream);
+  background: var(--bg-page);
       border: 1px solid rgba(245,240,232,0.6);
       padding: 10px 22px;
     }
@@ -744,7 +798,7 @@
        Wireframe: centred large product photo on cream bg
        ===================================================== */
     .feature-img-section {
-      background: var(--cream);
+      background: var(--bg-page);
       padding: 0;
       overflow: hidden;
       position: relative;
@@ -1029,3 +1083,154 @@
       .hero-symbol svg { width: 120px; height: 120px; }
       .craft::before { display: none; }
     }
+
+
+
+
+
+    
+
+    /* =====================================================
+   DARK THEME OVERRIDES
+   components that need more than just
+   variable swaps. images, nav logo, form inputs etc.
+   ===================================================== */
+
+/* Nav logo swap black PNG for white PNG */
+[data-theme="dark"] .nav-logo-symbol img {
+  content: url('../images/ui/LOGO SIMPLE WHITE.png');
+}
+
+[data-theme="dark"] .nav-logo-words img {
+  content: url('../images/ui/LOGO WHITE.png');
+}
+
+/* Nav links colour */
+[data-theme="dark"] .nav-links a {
+  color: rgba(240,236,227,0.7);
+}
+[data-theme="dark"] .nav-links a:hover,
+[data-theme="dark"] .nav-links a.active {
+  color: var(--cream);
+}
+
+[data-theme="dark"] .nav-instagram {
+  color: rgba(240,236,227,0.6);
+}
+
+/* Hamburger bars */
+[data-theme="dark"] .nav-hamburger span {
+  background: var(--cream);
+}
+
+/* Mobile nav drawer */
+[data-theme="dark"] .mobile-nav {
+  background: #0a0a0a;
+}
+[data-theme="dark"] .mobile-nav a {
+  color: var(--cream);
+  border-bottom-color: rgba(240,236,227,0.08);
+}
+
+/* Product cards border */
+[data-theme="dark"] .product-card {
+  border-color: rgba(240,236,227,0.06);
+}
+
+/* Form inputs on contact page */
+[data-theme="dark"] .form-input {
+  background: #1a1a1a;
+  color: var(--cream);
+  border: 1px solid rgba(240,236,227,0.15);
+}
+[data-theme="dark"] .form-input::placeholder {
+  color: rgba(240,236,227,0.3);
+}
+[data-theme="dark"] .form-input:focus {
+  border-color: var(--red-bright);
+}
+
+/* Contact form card — was black, stays dark but gets slight lift */
+[data-theme="dark"] .contact-form-card {
+  background: #111;
+  border: 1px solid rgba(240,236,227,0.06);
+}
+
+/* Info strip */
+[data-theme="dark"] .contact-info-strip {
+  background: #111;
+  border-color: rgba(240,236,227,0.08);
+}
+
+/* Footer no change needed */
+
+/* Collection hero  dark */
+
+/* Process cards stays */
+
+/* Order note input on product pages */
+[data-theme="dark"] .order-note {
+  background: #1a1a1a;
+  color: var(--cream);
+  border-color: rgba(240,236,227,0.15);
+}
+[data-theme="dark"] .order-note::placeholder {
+  color: rgba(240,236,227,0.3);
+}
+
+/* Filter buttons on collection page */
+[data-theme="dark"] .filter-btn {
+  border-color: rgba(240,236,227,0.4);
+  color: var(--cream);
+}
+[data-theme="dark"] .filter-btn--active {
+  background: var(--cream);
+  color: #0a0a0a;
+  border-color: var(--cream);
+}
+
+/* About maker photo placeholder */
+[data-theme="dark"] .maker-img-placeholder {
+  background: #2a2a2a;
+}
+
+/* Stat cards in craft section no change */
+
+/* Btn outline update border for dark bg */
+[data-theme="dark"] .btn-outline {
+  border-color: rgba(240,236,227,0.5);
+  color: var(--cream);
+}
+[data-theme="dark"] .btn-outline:hover {
+  background: var(--cream);
+  color: #0a0a0a;
+}
+
+/* Ghost btn */
+[data-theme="dark"] .btn-ghost {
+  color: rgba(240,236,227,0.7);
+}
+[data-theme="dark"] .btn-ghost:hover {
+  color: var(--cream);
+}
+
+
+/* variables, not hardcoded colours */
+.intro          { background: var(--bg-page); }
+.featured       { background: var(--bg-section); }
+.instagram      { background: var(--bg-page); }
+.contact-main   { background: var(--bg-page); }
+.contact-cards  { background: var(--bg-page); }
+.about-intro    { background: var(--bg-page); }
+.maker          { background: var(--bg-page); }
+.process        { background: var(--bg-page); }
+.values         { background: var(--bg-page); }
+.related        { background: var(--bg-page); }
+.collection-main { background: var(--bg-page); }
+
+/* card-hover text was hardcoded — fix it */
+.card-hover-text {
+  color: var(--cream);         
+  border-color: rgba(245,240,232,0.6);
+  background: transparent;    
+}

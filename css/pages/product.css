@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 44% 1fr;
   min-height: calc(100vh - var(--nav-height));
-  background: var(--cream);
+  background: var(--bg-page);
 }
 
 
@@ -39,7 +39,7 @@
   justify-content: center;
   transition: color 0.2s;
 }
-.gallery-close:hover { color: var(--cream); }
+.gallery-close:hover { color: var(bg-page); }
 
 /* Main image fills the gallery area */
 .gallery-main {
@@ -113,7 +113,7 @@
   transition: color 0.2s;
   flex-shrink: 0;
 }
-.thumb-next:hover { color: var(--cream); }
+.thumb-next:hover { color: var(--red-bright); }
 
 
 /* ── RIGHT — PRODUCT INFO ──────────────────────────── */
@@ -320,7 +320,7 @@
 /* ── YOU MAY ALSO LIKE ─────────────────────────────── */
 
 .related {
-  background: var(--cream);
+  background: var(--bg-page);
   padding: 80px 0 100px;
 }
 

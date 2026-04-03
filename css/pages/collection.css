@@ -17,7 +17,7 @@ font-family: var(--font-logo);
   font-weight: 400;
   letter-spacing: 8px;
   text-transform: uppercase;
-  color: var(--text-dark);
+  color: var(--black);
   position: relative;
   z-index: 2;
   /* Sits on top of the collar images */
@@ -68,7 +68,7 @@ font-family: var(--font-logo);
   align-items: center;
   gap: 20px;
   padding: 24px var(--section-pad-h);
-  background: var(--cream);
+  background: var(--bg-page);
   border-bottom: 1px solid var(--border);
   max-width: var(--container-max);
   margin: 0 auto;
@@ -106,7 +106,7 @@ font-family: var(--font-logo);
 /* Active / selected filter button — filled black */
 .filter-btn--active {
   background: var(--text-dark);
-  color: var(--cream);
+  color: var(--bg-page);
 }
 
 .filter-btn:not(.filter-btn--active):hover {
@@ -117,7 +117,7 @@ font-family: var(--font-logo);
 /* ── COLLECTION GRID ───────────────────────────────── */
 
 .collection-main {
-  background: var(--cream);
+  background: var(--bg-page);
   padding: 40px 0 80px;
 }
 
@@ -132,7 +132,7 @@ font-family: var(--font-logo);
   display: block;
   text-decoration: none;
   color: inherit;
-  background: var(--cream);
+  background: var(--bg-page);
   border: 1px solid rgba(26,26,26,0.08);
   transition: box-shadow 0.25s, transform 0.25s;
 }
@@ -147,7 +147,7 @@ font-family: var(--font-logo);
   position: relative;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: var(--charcoal);
+  background: var(--bg-page);
 }
 
 
