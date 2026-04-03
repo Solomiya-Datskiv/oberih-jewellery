@@ -4,7 +4,7 @@
 .about-hero {
   margin-top: var(--nav-height);
   position: relative;
-  height: 260px;
+  height: 280px;
   background: var(--cream);
   display: flex;
   align-items: center;

@@ -1,0 +1,343 @@
+
+.contact-hero {
+  margin-top: var(--nav-height);
+  position: relative;
+  height: 280px;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+
+.contact-hero-placeholder {
+  position: absolute;
+  inset: 0;
+
+  ;
+}
+
+.contact-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  /* Fade the bottom of the photo into cream */
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  mask-image:         linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+/* fade overlay so title reads clearly */
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(245,240,232,0.1) 0%,
+    rgba(245,240,232,0.6) 100%
+  );
+  z-index: 1;
+}
+
+.contact-hero-title {
+font-family: var(--font-logo);
+  font-size: clamp(40px, 7vw, 80px);
+  font-weight: 400;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ── MAIN CONTACT SECTION ──────────────────────────── */
+
+.contact-main {
+  padding: 80px 0 72px;
+  background: var(--cream);
+}
+
+/* Two columns: left text | right form card */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 72px;
+  align-items: start;
+}
+
+/* LEFT */
+
+.contact-heading {
+  font-family: var(--font-logo);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* "Let's talk." — in red, italic Philosopher font */
+.contact-tagline {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: clamp(32px, 4vw, 52px);
+  color: var(--red-bright);
+  margin-bottom: 36px;
+  line-height: 1.2;
+}
+
+.contact-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text-mid);
+  max-width: 320px;
+}
+
+
+/* RIGHT — dark form card */
+.contact-form-card {
+  background: var(--black);
+  padding: 48px 44px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-card-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--cream);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/* Form fields */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-label {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.55);
+}
+
+.form-input {
+  background: var(--cream);
+  border: none;
+  outline: none;
+  padding: 13px 14px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-dark);
+  width: 100%;
+  transition: box-shadow 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 2px var(--red);
+}
+
+/* Dropdown arrow for select */
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a4a4a' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+/* Submit button — full width red */
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 15px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-top: 4px;
+}
+
+/* Fine print below button */
+.form-note {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.7;
+  color: rgba(245,240,232,0.4);
+  margin-top: 4px;
+}
+
+/* Success message — hidden by default, shown by JS */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.form-success p {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: 0.5px;
+}
+
+.form-success.visible { display: block; }
+
+/* Decorative watermark symbol inside the card (bottom right) */
+.form-card-watermark {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 180px;
+  height: 180px;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* ── INFO STRIP ────────────────────────────────────── */
+
+.contact-info-strip {
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0;
+}
+
+.info-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+
+.info-label {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.info-value {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-dark);
+}
+
+.info-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26,26,26,0.2);
+  transition: border-color 0.2s, color 0.2s;
+  padding-bottom: 1px;
+}
+.info-link:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+
+/* ── INFO CARDS ────────────────────────────────────── */
+
+.contact-cards {
+  padding: 80px 0 100px;
+  background: var(--cream);
+}
+
+/* Two centred cards */
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* Circular red icon */
+.contact-card-icon {
+  width: 68px;
+  height: 68px;
+  background: var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.contact-card-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+.contact-card-body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+
+/* ── RESPONSIVE ────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .contact-inner      { grid-template-columns: 1fr; gap: 48px; }
+  .contact-desc       { max-width: 100%; }
+  .info-strip-grid    { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+}
+
+@media (max-width: 768px) {
+  .contact-hero       { height: 200px; }
+  .contact-hero-title { letter-spacing: 6px; }
+  .contact-form-card  { padding: 32px 24px; }
+  .contact-cards-grid { grid-template-columns: 1fr; }
+  .info-strip-grid    { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .info-strip-grid    { grid-template-columns: 1fr; }
+}

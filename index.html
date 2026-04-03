@@ -13,6 +13,15 @@
 </head>
 <body>
  
+<!-- ===== INTRO VIDEO OVERLAY ===== -->
+<div id="introOverlay">
+  <video id="introVideo" autoplay muted playsinline>
+    <source src="images/intro-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
 <!-- ===== NAVIGATION ===== -->
 <nav class="main-nav">
   <div class="nav-inner">
@@ -29,10 +38,9 @@
 
       </div>
       <div class="nav-logo-divider"></div>
-      <div class="nav-logo-words">
-        <span class="nav-brand">OBERIH</span>
-        <span class="nav-tagline">symbolic bead jewellery</span>
-      </div>
+<div class="nav-logo-words">
+  <img src="images/ui/LOGO BLACK.png" alt="OBERIH logo text">
+</div>
     </a>
  
     <ul class="nav-links">
@@ -357,26 +365,11 @@
         <div class="footer-logo">
 
           <!-- ============================================================
-               🖼️ FOOTER LOGO IMAGE SPOT
-               Replace the <svg>...</svg> block below with:
-               <img src="images/ui/logo-symbol-white.png"
-                    alt="OBERIH logo"
-                    style="width:26px;height:26px;object-fit:contain;">
-               Use a white version of your logo PNG (transparent background)
-               so it shows up on the dark footer background.
+               🖼️ 
                ============================================================ -->
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="2"  width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
-            <rect x="15" y="28" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
-            <rect x="2"  y="15" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
-            <rect x="28" y="15" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
-            <rect x="15" y="15" width="10" height="10" stroke="#f5f0e8" stroke-width="1.2"/>
-            <circle cx="20" cy="20" r="3" fill="#8B1A1A"/>
-          </svg>
+  <img src="images/ui/LOGO WHITE.png" alt="OBERIH logo text">
 
-          OBERIH
         </div>
-        <p class="footer-tagline">Symbolic bead jewellery</p>
         <p class="footer-desc">
           Handmade beaded accessories rooted in Ukrainian ornamental tradition.
           Each piece is a statement made with skill, time, and meaning.
@@ -395,7 +388,7 @@
         <p class="footer-col-title">Connect</p>
         <ul class="footer-links">
           <li><a href="https://instagram.com/oberih.jewellery" target="_blank">Instagram</a></li>
-          <li><a href="contact.html">Email</a></li>
+          <li><a href="mailto:oberihjewellery@gmail.com">Email</a></li>
           <li><a href="contact.html">Custom Orders</a></li>
         </ul>
       </div>
@@ -404,7 +397,7 @@
       <p class="footer-copy">© 2026 OBERIH. Handmade with care.</p>
       <div class="footer-social">
         <a href="https://instagram.com/oberih.jewellery" target="_blank">Instagram</a>
-        <a href="contact.html">Email</a>
+        <a href="mailto:oberihjewellery@gmail.com">Email</a>
       </div>
     </div>
   </div>
@@ -412,6 +405,36 @@
  
  
 <script>
+
+  const introOverlay = document.getElementById('introOverlay');
+  const introVideo = document.getElementById('introVideo');
+
+  // Only show on first visit
+  if (!sessionStorage.getItem('introPlayed')) {
+
+    introVideo.addEventListener('ended', () => {
+      introOverlay.classList.add('fade-out');
+
+      // Remove overlay completely after fade
+      setTimeout(() => {
+        introOverlay.style.display = 'none';
+      }, 1000);
+
+      // Save that it played
+      sessionStorage.setItem('introPlayed', 'true');
+    });
+
+  } else {
+    // Skip intro if already seen
+    introOverlay.style.display = 'none';
+  }
+
+
+
+
+
+
+
   const hamburgerBtn   = document.getElementById('hamburgerBtn');
   const mobileNav      = document.getElementById('mobileNav');
   const mobileNavClose = document.getElementById('mobileNavClose');

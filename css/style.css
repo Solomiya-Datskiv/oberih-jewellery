@@ -1,7 +1,33 @@
+/* ===== INTRO VIDEO OVERLAY ===== */
+#introOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FAF8F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
 
-    /* =====================================================
-       CSS VARIABLES — paste these into your style.css
-       ===================================================== */
+#introOverlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Video stays its real size */
+#introVideo {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+
+
     :root {
       /* Fonts */
       --font-logo:    'Poiret One', cursive;
@@ -231,8 +257,8 @@
     }
  
     .nav-logo-symbol svg {
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
     }
  
     .nav-logo-divider {
@@ -241,8 +267,17 @@
       background: rgba(26,26,26,0.2);
     }
  
-    .nav-logo-words { display: flex; flex-direction: column; gap: 1px; }
- 
+.nav-logo-words {
+  display: flex;
+  align-items: center; /* centers image vertically */
+}
+
+.nav-logo-words img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
     .nav-brand {
       font-family: var(--font-logo);
       font-size: 22px;
@@ -848,26 +883,19 @@
     }
  
     .footer-logo {
-      font-family: var(--font-logo);
-      font-size: 26px;
-      letter-spacing: 3px;
-      color: var(--cream);
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
- 
-    .footer-logo svg { width: 26px; height: 26px; }
- 
-    .footer-tagline {
-      font-family: var(--font-heading);
-      font-size: 9px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: rgba(245,240,232,0.3);
-      margin-bottom: 20px;
-    }
+  display: flex;
+  align-items: center; /* centers image vertically */
+        margin-bottom: 20px;
+
+}
+
+.footer-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+  
+
  
     .footer-desc {
       font-size: 13px;
@@ -989,7 +1017,10 @@
         --section-pad-h: 24px;
         --section-pad-v: 60px;
       }
- 
+ .nav-logo-words img {
+    height: 28px;
+  }
+
       .nav-links,
       .nav-instagram { display: none; }
       .nav-hamburger { display: flex; }
