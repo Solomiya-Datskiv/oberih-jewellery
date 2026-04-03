@@ -10,6 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Philosopher:ital@0;1&family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/pages/product.css">
+
+
+<script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAWQR0yoTWrxs4WtclFqfOnlZCsMUVjEEYwETrEyU-Lhz93j-LYMq3roXECHGzPWXZTLR83bqLZH4vPts&components=hosted-buttons&disable-funding=venmo&currency=EUR">
+</script>
+
 </head>
 <body>
 
@@ -64,123 +70,107 @@
   <main class="product-main">
 
     <!-- LEFT — Image Gallery -->
-    <div class="product-gallery">
+<div class="product-gallery">
 
-      <!-- Close / back button (top left corner of image) -->
-      <a href="../collection.html" class="gallery-close" aria-label="Back to collection">✕</a>
+  <a href="../collection.html" class="gallery-close" aria-label="Back to collection">✕</a>
 
-      <!--    🖼️ 
-      -->
-                <img src="../images/products/Geometric Red Statement Necklace 1.jpg"
-                alt="Geometric Red Necklace"
-                class="gallery-main-img"
-                id="galleryMainImg">
+  <div class="gallery-main">
+    <img src="../images/products/Geometric Red Statement Necklace 1.jpg"
+         alt="Geometric Red Statement Necklace"
+         class="gallery-main-img"
+         id="galleryMainImg">
+  </div>
 
-      <!-- Thumbnail dots / navigation -->
-      <div class="gallery-thumbs" id="galleryThumbs">
+  <div class="gallery-thumbs" id="galleryThumbs">
 
-        <!--    🖼️ 
-        -->
-        <div class="thumb" data-index="0">
-             <img src="../images/products/Geometric Red Statement Necklace 2.jpg"
-                  alt="View 1" class="thumb-img active" data-index="0"> </div>
+    <div class="thumb active" data-index="0">
+      <img src="../images/products/Geometric Red Statement Necklace 1.jpg"
+           alt="View 1" class="thumb-img">
+    </div>
+    <div class="thumb" data-index="1">
+      <img src="../images/products/Geometric Red Statement Necklace 2.jpg"
+           alt="View 2" class="thumb-img">
+    </div>
+    <div class="thumb" data-index="2">
+      <img src="../images/products/Geometric Red Statement Necklace 3.jpg"
+           alt="View 3" class="thumb-img">
+    </div>
+    <div class="thumb" data-index="3">
+      <img src="../images/products/Geometric Red Statement Necklace 4.jpg"
+           alt="View 4" class="thumb-img">
+    </div>
+    <div class="thumb" data-index="4">
+      <img src="../images/products/Geometric Red Statement Necklace 5.jpg"
+           alt="View 5" class="thumb-img">
+    </div>
 
-     <div class="thumb" data-index="1">
-     <img src="../images/products/Geometric Red Statement Necklace 3.jpg"
-                  alt="View 1" class="thumb-img active" data-index="1"> </div>
+    <button class="thumb-next" id="thumbNext" aria-label="Next image">→</button>
 
-        <div class="thumb" data-index="2">
-          <img src="../images/products/Geometric Red Statement Necklace 4.jpg"
-                  alt="View 1" class="thumb-img active" data-index="2"> 
-        </div>
+  </div>
 
-        <div class="thumb" data-index="3">
-          <img src="../images/products/Geometric Red Statement Necklace 5.jpg"
-                  alt="View 1" class="thumb-img active" data-index="3"> </div>
-        </div>
-
-        <!-- Next arrow -->
-        <button class="thumb-next" id="thumbNext" aria-label="Next image">→</button>
-      </div>
-
-    </div><!-- /product-gallery -->
+</div><!-- /product-gallery -->
 
 
-    <!-- RIGHT — Product Info -->
-    <div class="product-info">
+<!-- RIGHT — Product Info -->
+<div class="product-info">
 
-      <!-- Breadcrumb row: category left | back link right -->
-      <div class="product-breadcrumb">
-        <span class="product-category">Necklace</span>
-        <a href="../collection.html" class="back-link">Back to Collection →</a>
-      </div>
+  <!-- Breadcrumb row -->
+  <div class="product-breadcrumb">
+    <span class="product-category">Necklace</span>
+    <a href="../collection.html" class="back-link">Back to Collection →</a>
+  </div>
 
-      <!-- Product name -->
-      <h1 class="product-title">Geometric Red Statement Necklace</h1>
+  <h1 class="product-title">Geometric Red Statement Necklace</h1>
 
-      <!-- Price -->
-      <p class="product-price">€55</p>
+  <p class="product-price">€55</p>
 
-      <!-- Main description -->
-      <p class="product-description">
-    A bold statement necklace featuring traditional Ukrainian geometric patterns in high contrast black, red, and white.  Hand-beaded using traditional techniques, this piece takes approximately 26-28 hours to create. The strong geometric structure and vibrant colors make this necklace perfect for those who view accessories as self expression.
+  <p class="product-description">
+    A bold statement necklace featuring traditional Ukrainian geometric patterns
+    in high contrast black, red, and white. Hand-beaded using traditional
+    techniques, this piece takes approximately 26–28 hours to create. The strong
+    geometric structure and vibrant colors make this necklace perfect for those
+    who view accessories as self expression.
+    <br><br>
+    <strong>Materials:</strong> Glass beads, brass findings, cotton thread.<br>
+    <strong>Clasp:</strong> Brass toggle with extension chain.
+  </p>
 
-Materials: Glass beads, brass findings, cotton thread.
-Clasp: Brass toggle with extension chain.
-      </p>
+  <div class="pattern-meaning">
+    <h2 class="pattern-meaning-title">Pattern Meaning</h2>
+    <p class="pattern-meaning-body">
+      This geometric pattern draws from traditional Ukrainian cross-stitch motifs
+      symbolizing protection and strength. The interlocking diamonds represent
+      unity and continuity, while the bold red color signifies vitality and life
+      force in Ukrainian folk tradition.
+    </p>
+  </div>
 
-      <!-- Pattern meaning block — left border accent -->
-      <div class="pattern-meaning">
-        <h2 class="pattern-meaning-title">Pattern Meaning</h2>
-        <!-- pattern description -->
-        <p class="pattern-meaning-body">
-This geometric pattern draws from traditional Ukrainian cross-stitch motifs symbolizing protection and strength. The interlocking diamonds represent unity and continuity, while the bold red color signifies vitality and life force in Ukrainian folk tradition.
-        </p>
-      </div>
+  <div class="made-to-order">
+    <h3 class="mto-title">Made-to-Order</h3>
+    <p class="mto-body">
+      Each piece is handcrafted to order. Production time is approximately
+      2-3 weeks from order confirmation. You'll receive progress photos as
+      your piece is created, and we'll notify you when it's ready to ship.
+    </p>
+  </div>
 
-      <!-- Made-to-order notice — olive/sage background box -->
-      <div class="made-to-order">
-        <h3 class="mto-title">Made-to-Order</h3>
-        <p class="mto-body">
-          Each piece is handcrafted to order. Production time is approximately
-          2-3 weeks from order confirmation. You'll receive progress photos as
-          your piece is created, and we'll notify you when it's ready to ship.
-        </p>
-      </div>
+  <!-- PAYMENT SECTION -->
+  <div class="buy-section">
 
-      <!-- BUY PRODUCT — PayPal form
-           ▼ CHANGE: replace YOUR_PAYPAL_BUTTON_ID with the real ID
-             you generate in PayPal dashboard for this specific product.
-             Each product gets its own unique button ID.
-      -->
-      <form
-        action="https://www.paypal.com/cgi-bin/webscr"
-        method="post"
-        target="_blank"
-        class="buy-form"
-      >
-        <input type="hidden" name="cmd"            value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID">
-        <input type="hidden" name="currency_code"  value="EUR">
 
-        <!-- Optional: customer note field -->
-        <input
-          type="hidden"
-          name="on0"
-          value="Custom colour request or notes">
-        <input
-          type="text"
-          name="os0"
-          placeholder="Custom colour request or notes (optional)"
-          class="order-note"
-        >
 
-        <button type="submit" class="btn btn-primary buy-btn">
-          Buy Product
-        </button>
-      </form>
+    <!-- PayPal render button -->
+    <div id="paypal-container-X2FAAWUKZ3X4C" class="paypal-btn-wrap"></div>
 
-    </div><!-- /product-info -->
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "X2FAAWUKZ3X4C",
+      }).render("#paypal-container-X2FAAWUKZ3X4C");
+    </script>
+
+  </div>
+
+</div><!-- /product-info -->
 
   </main>
 

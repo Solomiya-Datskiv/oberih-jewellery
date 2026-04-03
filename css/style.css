@@ -652,20 +652,26 @@
     }
  
     /* big watermark text behind */
-    .craft::before {
-      content: 'OBERIH';
-      position: absolute;
-      right: -40px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: var(--font-logo);
-      font-size: 220px;
-      letter-spacing: -4px;
-      color: rgba(255,255,255,0.04);
-      pointer-events: none;
-      white-space: nowrap;
-      line-height: 1;
-    }
+
+.craft::before {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+
+  width: 600px;   /* control size */
+  height: 600px;
+
+  background: url("../images/ui/LOGO SIMPLE BLACK.png") no-repeat center;
+  background-size: contain;
+
+  opacity: 0.09; /* transparency ( 0.05–0.2) */
+
+  pointer-events: none;
+  z-index: 0;
+}
  
     .craft-inner {
       display: grid;
@@ -742,38 +748,27 @@
       padding: 0;
       overflow: hidden;
       position: relative;
-      min-height: 420px;
-      display: flex;
+  width: 100%;
+  height: auto;   /* KEY FIX */
+  display: flex;      
       align-items: center;
       justify-content: center;
+        padding-bottom: 0;
+  margin-bottom: 0;
+    margin-top: 5%;
+
     }
+
+
  
-   
-    .feature-img-placeholder {
-      width: 100%;
-      min-height: 420px;
-      background: var(--cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
  
-    .feature-img-inner {
-      width: 700px;
-      max-width: 90%;
-      aspect-ratio: 16/9;
-      background: radial-gradient(ellipse at 50% 70%, rgba(139,26,26,0.15) 0%, transparent 70%), var(--cream-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
  
     /* =====================================================
        CTA BANNER
        Wireframe: dark bg | text left | button right
        ===================================================== */
     .cta-banner {
+        margin-top: 0;
       background: var(--black);
       padding: 72px 0;
     }
