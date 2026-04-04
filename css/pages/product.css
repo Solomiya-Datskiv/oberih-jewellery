@@ -401,7 +401,7 @@
   .product-gallery {
     position: relative;
     top: 0;
-    height: 60vw;
+    height: 130vw;
     max-height: 500px;
   }
 
@@ -409,7 +409,7 @@
 }
 
 @media (max-width: 768px) {
-  .product-gallery { height: 70vw; }
+  .product-gallery { height: 120vw; }
   .product-info    { padding: 32px 24px 60px; }
   .related-grid    { grid-template-columns: 1fr; gap: 32px; }
   .product-title   { font-size: 32px; }

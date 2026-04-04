@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Browse the OBERIH collection: handmade Ukrainian beaded necklaces, brooches and accessories. Made to order, €25–€180.">
+
+<link rel="icon" href="images/ui/favicon.png" type="image/png">
 
     <script>
     (function() {
@@ -11,26 +14,37 @@
     })();
   </script>
 
-  <title>Collection — OBERIH</title>
+  <title>Collection OBERIH</title>
   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Philosopher:ital@0;1&family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages/collection.css">
 </head>
 <body>
 
-  <!-- ===== NAVIGATION (identical to index.html — paste same nav) ===== -->
+  <!-- ===== NAVIGATION (identical to index.html paste same nav) ===== -->
   <nav class="main-nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <div class="nav-logo-symbol">
-    <img src="images/ui/LOGO SIMPLE BLACK.png"
-                  alt="OBERIH logo symbol"
-                  style="width:32px;height:32px;object-fit:contain;">
-        </div>
-        <div class="nav-logo-divider"></div>
-<div class="nav-logo-words">
-  <img src="images/ui/LOGO BLACK.png" alt="OBERIH logo text">
+
+  <div class="nav-logo-symbol">
+  <img src="images/ui/logo-simple-black.png"
+       alt="OBERIH logo symbol"
+       class="logo-dark"
+       style="width:32px;height:32px;object-fit:contain;">
+  <img src="images/ui/logo-simple-white.png"
+       alt="OBERIH logo symbol"
+       class="logo-light"
+       style="width:32px;height:32px;object-fit:contain;">
 </div>
+
+
+      <div class="nav-logo-divider"></div>
+<!-- NEW -->
+<div class="nav-logo-words">
+  <img src="images/ui/logo-black.png" alt="OBERIH logo text" class="logo-dark">
+  <img src="images/ui/logo-white.png" alt="OBERIH logo text" class="logo-light">
+</div>
+
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -49,7 +63,7 @@
 
        <!-- Theme toggle button before the hamburger button -->
 <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-  <!-- Sun icon (shown in dark mode — click to go light) -->
+  <!-- Sun icon (shown in dark mode click to go light) -->
   <svg class="theme-icon theme-icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
     <circle cx="12" cy="12" r="5"/>
     <line x1="12" y1="1" x2="12" y2="3"/>
@@ -61,7 +75,7 @@
     <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
   </svg>
-  <!-- Moon icon (shown in light mode — click to go dark) -->
+  <!-- Moon icon (shown in light mode click to go dark) -->
   <svg class="theme-icon theme-icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
   </svg>
@@ -94,7 +108,7 @@
     <!-- ============================================================
          🖼️ 
          ============================================================ -->
-    <img src="images/ui/LEFT 1.png"
+    <img src="images/ui/left-1.png"
                        alt="" class="hero-collar hero-collar--left"> 
 
     <!-- Page title -->
@@ -103,7 +117,7 @@
     <!-- ============================================================
          🖼️ 
          ============================================================ -->
-<img src="images/ui/RIGHT 1.png"
+<img src="images/ui/right-1.png"
                        alt="" class="hero-collar hero-collar--right"> 
 
   </section>
@@ -134,13 +148,13 @@
     <div class="container">
       <div class="collection-grid" id="collectionGrid">
 
-        <!-- CARD TEMPLATE — duplicate this for each product -->
+        <!-- CARD  -->
 
         <!-- Product 1 -->
           <link rel="stylesheet" href="css/pages/home.css">
           <a href="products/geometric-red-necklace.html" class="product-card" data-category="necklaces">
           <div class="card-img-wrap">
-          <img src="images/products/Geometric Red Statement Necklace 1.jpg" alt="Geometric Red Statement Necklace"> 
+          <img src="images/products/Geometric-Red-Statement-Necklace-1.jpg" alt="Geometric Red Statement Necklace"> 
           <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
           </div>
           <div class="card-info">
@@ -153,7 +167,7 @@
         <!-- Product 2 -->
         <a href="products/autumn-sylianka-necklace.html" class="product-card" data-category="necklaces">
           <div class="card-img-wrap">
-          <img src="images/products/Autumn Sylianka Statement Necklace 1.jpg" alt="Autumn Sylianka Statement Necklace"> 
+          <img src="images/products/Autumn-Sylianka-Statement-Necklace-1.jpg" alt="Autumn Sylianka Statement Necklace"> 
             <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
           </div>
           <div class="card-info">
@@ -166,7 +180,7 @@
         <!-- Product 3 -->
         <a href="products/beige-sylianka-necklace.html" class="product-card" data-category="necklaces">
           <div class="card-img-wrap">
-          <img src="images/products/Beige Sylianka Statement Necklace 1.jpg" alt="Beige Sylianka Statement Necklace"> 
+          <img src="images/products/Beige-Sylianka-Statement-Necklace-1.jpg" alt="Beige Sylianka Statement Necklace"> 
             <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
           </div>
           <div class="card-info">
@@ -179,7 +193,7 @@
         <!-- Product 4 -->
         <a href="products/geometric-sunburst-necklace.html" class="product-card" data-category="necklaces">
           <div class="card-img-wrap">
-          <img src="images/products/Geometric Sunburst Necklace 1.png" alt="Geometric Sunburst Necklace"> 
+          <img src="images/products/Geometric-Sunburst-Necklace-1.png" alt="Geometric Sunburst Necklace"> 
             <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
           </div>
           <div class="card-info">
@@ -192,7 +206,7 @@
         <!-- Product 5 -->
         <a href="products/ribbon-choker.html" class="product-card" data-category="necklaces">
           <div class="card-img-wrap">
-          <img src="images/products/Traditional Pattern Ribbon Choker 1.jpg" alt="Traditional Pattern Ribbon Choker"> 
+          <img src="images/products/Traditional-Pattern-Ribbon-Choker-1.jpg" alt="Traditional Pattern Ribbon Choker"> 
             <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
           </div>
           <div class="card-info">
@@ -205,12 +219,12 @@
         <!-- Product 6 — example "other" category for filter -->
         <a href="products/deer-charm.html" class="product-card" data-category="other">
           <div class="card-img-wrap">
-          <img src="images/products/Little Deer Charm 1.jpg" alt="Little Deer Charm"> 
+          <img src="images/products/Little-Deer-Charm-1.jpg" alt="Little Deer Charm"> 
             <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
           </div>
           <div class="card-info">
             <p class="card-category">Beaded Charm</p>
-            <p class="card-name">Little Deer Charm 1</p>
+            <p class="card-name">Little Deer Charm</p>
             <p class="card-price">€42</p>
           </div>
         </a>
@@ -218,12 +232,12 @@
         <!-- Product 7 — example "other" category for filter -->
         <a href="products/alpaca-figure.html" class="product-card" data-category="other">
           <div class="card-img-wrap">
-          <img src="images/products/Beaded Alpaca Figure 1.jpg" alt="Beaded Alpaca Figure"> 
+          <img src="images/products/Beaded-Alpaca-Figure-1.jpg" alt="Beaded Alpaca Figure"> 
             <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
           </div>
           <div class="card-info">
             <p class="card-category">Beaded Charm</p>
-            <p class="card-name">Beaded Alpaca Figure 1</p>
+            <p class="card-name">Beaded Alpaca Figure</p>
             <p class="card-price">€42</p>
           </div>
         </a>
@@ -231,7 +245,7 @@
         <!-- Product 8 -->
         <a href="products/goose-figure.html" class="product-card" data-category="other">
           <div class="card-img-wrap">
-          <img src="images/products/Beaded Goose Figure 1.jpg" alt="Beaded Goose Figure"> 
+          <img src="images/products/Beaded-Goose-Figure-1.jpg" alt="Beaded Goose Figure"> 
             <div class="card-hover"><span class="card-hover-text">View Piece</span></div>
           </div>
           <div class="card-info">
@@ -280,7 +294,7 @@
           <!-- ============================================================
                🖼️ 
                ============================================================ -->
-  <img src="images/ui/LOGO WHITE.png" alt="OBERIH logo text">
+  <img src="images/ui/logo-white.png" alt="OBERIH logo text">
 
         </div>
         <p class="footer-desc">

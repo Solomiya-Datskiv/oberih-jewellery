@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Handmade Ukrainian bead jewellery inspired by tradition. Unique statement necklaces crafted with meaning.">
+
+<meta property="og:title" content="OBERIH, Symbolic Bead Jewellery">
+<meta property="og:description" content="Handcrafted Ukrainian bead jewellery rooted in tradition.">
+<meta property="og:image" content="images/ui/hero-bg.png">
+<link rel="icon" href="images/ui/favicon.png" type="image/png">
+
   <!-- Theme: must be first to prevent flash -->
   <script>
     (function() {
@@ -23,10 +30,10 @@
  
 <!-- ===== INTRO VIDEO OVERLAY ===== -->
 <div id="introOverlay">
-  <video id="introVideo" autoplay muted playsinline>
+  <video id="introVideo" autoplay muted playsinline preload="auto">>
     <source src="images/intro-video.mp4" type="video/mp4">
     Your browser does not support the video tag.
-  </video>
+  </autoplay>
 </div>
 
 
@@ -35,20 +42,30 @@
   <div class="nav-inner">
  
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-symbol">
+
 
         <!-- ============================================================
              🖼️ 
              ============================================================ -->
-    <img src="images/ui/LOGO SIMPLE BLACK.png"
-                  alt="OBERIH logo symbol"
-                  style="width:32px;height:32px;object-fit:contain;">
-
-      </div>
-      <div class="nav-logo-divider"></div>
-<div class="nav-logo-words">
-  <img src="images/ui/LOGO BLACK.png" alt="OBERIH logo text">
+<div class="nav-logo-symbol">
+  <img src="images/ui/logo-simple-black.png"
+       alt="OBERIH logo symbol"
+       class="logo-dark"
+       style="width:32px;height:32px;object-fit:contain;">
+  <img src="images/ui/logo-simple-white.png"
+       alt="OBERIH logo symbol"
+       class="logo-light"
+       style="width:32px;height:32px;object-fit:contain;">
 </div>
+
+
+      <div class="nav-logo-divider"></div>
+<!-- NEW -->
+<div class="nav-logo-words">
+  <img src="images/ui/logo-black.png" alt="OBERIH logo text" class="logo-dark">
+  <img src="images/ui/logo-white.png" alt="OBERIH logo text" class="logo-light">
+</div>
+
     </a>
  
     <ul class="nav-links">
@@ -69,7 +86,7 @@
  
  <!-- Theme toggle button before the hamburger button -->
 <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-  <!-- Sun icon (shown in dark mode — click to go light) -->
+  <!-- Sun icon (shown in dark mode  click to go light) -->
   <svg class="theme-icon theme-icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
     <circle cx="12" cy="12" r="5"/>
     <line x1="12" y1="1" x2="12" y2="3"/>
@@ -81,7 +98,7 @@
     <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
   </svg>
-  <!-- Moon icon (shown in light mode — click to go dark) -->
+  <!-- Moon icon (shown in light mode  click to go dark) -->
   <svg class="theme-icon theme-icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
   </svg>
@@ -148,7 +165,7 @@
           Handmade Bead Jewellery rooted in<br>Ukrainian tradition
         </p>
         <p class="intro-body">
-          Oberih — meaning "protective charm" in Ukrainian — brings centuries-old
+          Oberih, meaning "protective charm" in Ukrainian, brings centuries-old
           ornamental patterns into contemporary wear. Each piece is handcrafted
           using traditional bead weaving techniques, with geometric patterns inspired
           by Ukrainian folk art.
@@ -188,7 +205,7 @@
                🖼️ 
                ============================================================ -->
 <a href="products/autumn-sylianka-necklace.html" target="_blank" >
-<img src="images/products/Autumn Sylianka Statement Necklace 2.jpg"
+<img src="images/products/Autumn-Sylianka-Statement-Necklace-2.jpg"
                     alt="Autumn Sylianka Statement Necklace 2"
                     class="card-img">           
  </a>
@@ -209,7 +226,7 @@
                🖼️ 
                ============================================================ -->
 <a href="products/ribbon-choker.html" target="_blank" >
-         <img src="images/products/Traditional Pattern Ribbon Choker 2.jpg"
+         <img src="images/products/Traditional-Pattern-Ribbon-Choker-2.jpg"
                     alt="Traditional Pattern Ribbon Choker"
                     class="card-img">  </a>        
 
@@ -230,7 +247,7 @@
                🖼️ 
                ============================================================ -->
 <a href="products/geometric-red-necklace.html" target="_blank">
-              <img src="images/ui/Geometric Red Statement Necklace 2.jpg"
+              <img src="images/ui/Geometric-Red-Statement-Necklace-2.jpg"
                     alt="Geometric Red Necklace"
                     class="card-img">     </a>       
 
@@ -262,7 +279,7 @@
         <p class="eyebrow">Handcrafted Pieces</p>
         <h2 class="craft-title">Every bead is placed<br>with intention.</h2>
         <p class="craft-body">
-          Each piece in the collection begins as a pattern —
+          Each piece in the collection begins as a pattern:
           drawn from Ukrainian ornamental traditions passed
           down through generations. The bead-weaving
           process takes between 20 and 60 hours of skilled
@@ -396,7 +413,7 @@
           <!-- ============================================================
                🖼️ 
                ============================================================ -->
-  <img src="images/ui/LOGO WHITE.png" alt="OBERIH logo text">
+  <img src="images/ui/logo-white.png" alt="OBERIH logo text">
 
         </div>
         <p class="footer-desc">
@@ -457,6 +474,10 @@
     // Skip intro if already seen
     introOverlay.style.display = 'none';
   }
+  setTimeout(() => {
+  introOverlay.classList.add('fade-out');
+  introOverlay.style.display = 'none';
+}, 5000); // fallback
 
 
 </script>

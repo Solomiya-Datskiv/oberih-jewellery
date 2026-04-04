@@ -17,3 +17,4 @@ if (urlParams.get('sent') === 'true') {
     window.history.replaceState({}, '', window.location.pathname);
   }
 }
+
