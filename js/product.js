@@ -1,7 +1,3 @@
-// =====================================================
-// PRODUCT PAGE — Image gallery / thumbnail switcher
-// File: js/product.js
-// =====================================================
 
 const mainImg   = document.getElementById('galleryMainImg');
 const thumbs    = document.querySelectorAll('.thumb');

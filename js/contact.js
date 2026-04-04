@@ -1,10 +1,6 @@
-// =====================================================
-// CONTACT PAGE — Form success message
-// File: js/contact.js
-// =====================================================
 
-// FormSubmit redirects back to your page with ?sent=true
-// This checks for that and shows the success message
+// FormSubmit redirects back to the page with ?sent=true
+// checks for that and shows the success message
 // instead of the form.
 
 const urlParams = new URLSearchParams(window.location.search);

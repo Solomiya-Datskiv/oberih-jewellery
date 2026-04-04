@@ -235,6 +235,10 @@ font-family: var(--font-logo);
 }
 
 @media (max-width: 768px) {
+    .collection-hero-title { letter-spacing: 6px; 
+          font-size: clamp(20px, 7vw, 80px);
+}
+
   .collection-hero  { height: 180px; }
   .filter-bar       { padding: 16px 24px; flex-wrap: wrap; }
   .collection-grid  { grid-template-columns: repeat(2, 1fr); gap: 12px; }

@@ -459,38 +459,6 @@
   }
 
 
-
-
-
-
-
-  const hamburgerBtn   = document.getElementById('hamburgerBtn');
-  const mobileNav      = document.getElementById('mobileNav');
-  const mobileNavClose = document.getElementById('mobileNavClose');
- 
-  hamburgerBtn.addEventListener('click', () => {
-    mobileNav.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  });
- 
-  mobileNavClose.addEventListener('click', () => {
-    mobileNav.classList.remove('open');
-    document.body.style.overflow = '';
-  });
- 
-  mobileNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
- 
-  const nav = document.querySelector('.main-nav');
-  window.addEventListener('scroll', () => {
-    nav.style.boxShadow = window.scrollY > 10
-      ? '0 2px 20px rgba(0,0,0,0.08)'
-      : 'none';
-  });
 </script>
  
    <script src="js/main.js"></script>

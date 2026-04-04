@@ -342,6 +342,11 @@
 }
 
 @media (max-width: 768px) {
+      .about-hero-title { letter-spacing: 6px; 
+  font-size: clamp(20px, 7vw, 80px);
+}
+      
+
   .about-hero       { height: 180px; }
   .about-intro      { padding: 60px 24px; }
   .values-grid      { grid-template-columns: 1fr; gap: 40px; }
